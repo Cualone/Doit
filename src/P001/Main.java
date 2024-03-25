@@ -12,8 +12,12 @@ public class Main {
         int result = 0;
         String arr = br.readLine();
 
-        for (int i = 0; i < N; i++) {
-            result += Integer.parseInt(String.valueOf(arr.charAt(i)));
+//        for (int i = 0; i < N; i++) {
+//            result += Integer.parseInt(String.valueOf(arr.charAt(i)));
+//        }
+
+        for (char c : arr.toCharArray()) {
+            result += Character.getNumericValue(c);
         }
 
         System.out.println(result);
